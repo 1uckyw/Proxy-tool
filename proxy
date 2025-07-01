@@ -53,11 +53,12 @@ class Proxy(object):
             'speed': self.speed,
             'source': self.source,
             'vali_count': self.vali_count,
+            'uuid': self.uuid,
         }
 
         return data
 
-    def set_value(self, ip, port, country, anonymity, source='unkonw', https='no', speed=-1, vali_count=0):
+    def set_value(self, ip, port, country, anonymity, source='unkonw', https='no', speed=-1, vali_count=0, uuid):
         self.ip = ip
         self.port = port
         self.country = country
@@ -66,6 +67,7 @@ class Proxy(object):
         self.speed = speed
         self.source = source
         self.vali_count = vali_count
+        self.uuid = uuid
 
     def get_anonymity_type(self, anonymity):
         '''There are 3 levels of proxies according to their anonymity.
