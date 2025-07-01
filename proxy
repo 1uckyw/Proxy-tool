@@ -23,6 +23,7 @@ class Proxy(object):
             'speed': self.speed,
             'source': self.source,
             'vali_count': self.vali_count,
+            'uuid': self.uuid,
         }
 
         return str(data)
@@ -37,6 +38,7 @@ class Proxy(object):
             'speed': self.speed,
             'source': self.source,
             'vali_count': self.vali_count,
+            'uuid': self.uuid,
         }
 
         return data
