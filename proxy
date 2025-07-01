@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 class Proxy(object):
     def __init__(self):
         self.id = 1
@@ -12,6 +11,7 @@ class Proxy(object):
         self.speed = ''
         self.source = ''
         self.vali_count = 0
+        self.uuid = ''
 
     def __str__(self):
         data = {
