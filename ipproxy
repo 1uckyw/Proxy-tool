@@ -17,3 +17,6 @@ if __name__ == '__main__':
             format = '%(asctime)s: %(message)s',
             level = logging.DEBUG
     )
+	
+	subprocess.Popen(['python', 'run_crawl_proxy.py'])
+    subprocess.Popen(['python', 'run_server.py'])
