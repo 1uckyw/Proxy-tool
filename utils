@@ -42,3 +42,6 @@ def kill_ports(ports):
         log('kill %s finish' % port)
 
     time.sleep(1)
+
+def make_dir(dir):
+    log('make dir:%s' % dir)
