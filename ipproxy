@@ -11,3 +11,9 @@ if __name__ == '__main__':
 
     if not os.path.exists('log'):
         os.makedirs('log')
+
+	logging.basicConfig(
+            filename = 'log/ipproxy.log',
+            format = '%(asctime)s: %(message)s',
+            level = logging.DEBUG
+    )
