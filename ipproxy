@@ -23,3 +23,5 @@ if __name__ == '__main__':
 	
 	if 'async' in sys.argv: 
         run_validator_async.async_validator()
+	else:
+        run_validator.validator()
