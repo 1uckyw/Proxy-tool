@@ -5,3 +5,16 @@ import pymysql
 
 from proxy import Proxy
 from sql.sql_base import SqlBase
+
+class MySql(SqlBase):
+    def __init__(self, **kwargs):
+        super(MySql, self).__init__(**kwargs)
+
+        self.conn = pymysql.connect(**kwargs)
+        self.cursor = self.conn.cursor()
+
+        try:
+            self.conn.select_db(config.database)
+        except:
+            self.create_database(config.database)
+            self.conn.select_db(config.database)
