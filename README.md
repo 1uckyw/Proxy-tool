@@ -5,5 +5,9 @@
 
 cryptography模块安装环境:
 
-```sudo yum install gcc libffi-devel python-devel openssl-devel
-```$ pip install -r requirements.txt
+```
+sudo yum install gcc libffi-devel python-devel openssl-devel
+```
+```
+$ pip install -r requirements.txt
+```
