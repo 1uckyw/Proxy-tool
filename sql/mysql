@@ -18,3 +18,10 @@ class MySql(SqlBase):
         except:
             self.create_database(config.database)
             self.conn.select_db(config.database)
+
+    def create_database(self, database_name):
+        try:
+            command = 'CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARACTER SET \'utf8\' ' % database_name
+            logging.debug('mysql create_database command:%s' % command)
+            self.cursor.execute(command)
+            self.conn.commit()
