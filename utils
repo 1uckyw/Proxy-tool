@@ -45,3 +45,5 @@ def kill_ports(ports):
 
 def make_dir(dir):
     log('make dir:%s' % dir)
+    if not os.path.exists(dir):
+        os.makedirs(dir)
