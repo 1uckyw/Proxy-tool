@@ -13,3 +13,6 @@ def log(msg, level=logging.DEBUG):
     if level == logging.WARNING or level == logging.ERROR:
         for line in traceback.format_stack():
             print(line.strip())
+
+        for line in traceback.format_stack():
+            logging.log(level, line.strip())
