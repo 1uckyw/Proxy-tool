@@ -28,7 +28,7 @@ class MySql(SqlBase):
 		except Exception as e:
             logging.exception('mysql create_database exception:%s' % e)
 			
-	def init_database(self, database_name):
+    def init_database(self, database_name):
         try:
             command = 'CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARACTER SET \'utf8\' ' % database_name
             logging.debug('mysql create_database command:%s' % command)
