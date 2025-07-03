@@ -28,7 +28,7 @@ class MySql(SqlBase):
 		except Exception as e:
             logging.exception('mysql create_database exception:%s' % e)
 			
-	def init_database(self, database_name):
+    def init_database(self, database_name):
         try:
             command = 'CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARACTER SET \'utf8\' ' % database_name
             logging.debug('mysql create_database command:%s' % command)
@@ -36,3 +36,24 @@ class MySql(SqlBase):
             self.conn.commit()
         except Exception as e:
             logging.exception('mysql create_database exception:%s' % e)
+
+    def init_proxy_table(self, table_name):
+        command = (
+            "CREATE TABLE IF NOT EXISTS {} ("
+            "`id` INT(8) NOT NULL AUTO_INCREMENT,"
+            "`ip` CHAR(25) NOT NULL UNIQUE,"
+            "`port` INT(4) NOT NULL,"
+            "`country` TEXT DEFAULT NULL,"
+            "`anonymity` INT(2) DEFAULT NULL,"
+            "`https` CHAR(4) DEFAULT NULL ,"
+            "`speed` FLOAT DEFAULT NULL,"
+            "`source` CHAR(20) DEFAULT NULL,"
+            "`vali_count` INT(5) DEFAULT 0,"
+            "`created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,"
+            "`updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,"
+            "PRIMARY KEY(id),"
+            "UNIQUE KEY `uniq_ip` (`ip`)"
+            ") ENGINE=InnoDB".format(table_name))
+	self.cursor.execute(command)
+        self.conn.commit()
+
