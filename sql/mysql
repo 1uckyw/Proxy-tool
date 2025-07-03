@@ -54,3 +54,6 @@ class MySql(SqlBase):
             "PRIMARY KEY(id),"
             "UNIQUE KEY `uniq_ip` (`ip`)"
             ") ENGINE=InnoDB".format(table_name))
+	self.cursor.execute(command)
+        self.conn.commit()
+
