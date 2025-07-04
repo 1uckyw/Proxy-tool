@@ -6,7 +6,7 @@ import traceback
 import time
 import datetime
 
-def log(msg, level=logging.DEBUG):
+def log(msg, level=logging.INFO):
     logging.log(level, msg)
     print('%s [%s], msg:%s' % (datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), level, msg))
 
