@@ -18,6 +18,7 @@ def log(msg, level=logging.INFO):
             logging.log(level, line.strip())
 
 def kill_ports(ports):
+    print('%s [%s], msg:%s' % (datetime.datetime.now().strftime('%Y-%m-%d'), level, msg))
     for port in ports:
         log('kill %s start' % port)
         popen = subprocess.Popen('lsof -i:%s' % port, shell=True, stdout=subprocess.PIPE)
