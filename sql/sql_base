@@ -3,3 +3,5 @@ class SqlBase(object):
         pass
     def init_database(self, database_name):
         pass
+    def init_proxy_table(self, table_name):
+        pass
