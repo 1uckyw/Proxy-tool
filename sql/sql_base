@@ -1,3 +1,5 @@
 class SqlBase(object):
     def __init__(self, **kwargs):
         pass
+    def init_database(self, database_name):
+        pass
