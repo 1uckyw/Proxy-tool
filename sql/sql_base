@@ -7,3 +7,5 @@ class SqlBase(object):
         pass
     def insert_proxy(self, table_name, proxy):
         pass
+    def select_proxy(self, table_name, **kwargs):
+        pass
