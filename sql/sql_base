@@ -11,3 +11,5 @@ class SqlBase(object):
         pass
     def update_proxy(self, table_name, proxy):
         pass
+    def delete_proxy(self, table_name, proxy):
+        pass
