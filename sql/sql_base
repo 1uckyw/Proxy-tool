@@ -9,3 +9,5 @@ class SqlBase(object):
         pass
     def select_proxy(self, table_name, **kwargs):
         pass
+    def update_proxy(self, table_name, proxy):
+        pass
