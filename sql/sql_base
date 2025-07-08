@@ -15,3 +15,5 @@ class SqlBase(object):
         pass
     def delete_old(self, table_name, day):
         pass
+    def get_proxy_count(self, table_name):
+        pass
