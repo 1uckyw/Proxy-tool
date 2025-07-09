@@ -21,3 +21,5 @@ class SqlBase(object):
         pass
     def get_proxy_with_id(self, table_name, id):
         pass
+    def del_proxy_with_id(self, table_name, id):
+        pass
