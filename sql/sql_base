@@ -17,3 +17,5 @@ class SqlBase(object):
         pass
     def get_proxy_count(self, table_name):
         pass
+    def get_proxy_ids(self, table_name):
+        pass
