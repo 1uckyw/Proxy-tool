@@ -25,3 +25,5 @@ class SqlBase(object):
         pass
     def del_proxy_with_ip(self, table_name, ip):
         pass
+    def commit(self):
+        pass
