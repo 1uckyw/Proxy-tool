@@ -1,0 +1,7 @@
+import config
+
+from sql.sql_base import SqlBase
+
+class SqlManager(object):
+  def init_database(self, database_name):
+        pass
