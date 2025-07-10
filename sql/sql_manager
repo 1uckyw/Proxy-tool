@@ -5,3 +5,5 @@ from sql.sql_base import SqlBase
 class SqlManager(object):
   def init_database(self, database_name):
         pass
+  def init_proxy_table(self, table_name):
+        return self.sql.init_proxy_table(table_name)
