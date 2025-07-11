@@ -9,3 +9,5 @@ class SqlManager(object):
         return self.sql.init_proxy_table(table_name)
   def insert_proxy(self, table_name, proxy):
         return self.sql.insert_proxy(table_name, proxy)
+  def insert_valid_proxy(self,id=id):
+        return self.sql.insert_valid_proxy(id)
