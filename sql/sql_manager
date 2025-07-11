@@ -7,3 +7,5 @@ class SqlManager(object):
         pass
   def init_proxy_table(self, table_name):
         return self.sql.init_proxy_table(table_name)
+  def insert_proxy(self, table_name, proxy):
+        pass
