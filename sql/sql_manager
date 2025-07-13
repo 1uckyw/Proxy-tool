@@ -19,3 +19,5 @@ class SqlManager(object):
         return self.sql.update_valid_proxy(id=id)
   def delete_proxy(self, table_name, proxy):
         return self.sql.delete_proxy(table_name, proxy)
+  def delete_old(self, table_name, day):
+        return self.sql.delete_old(table_name, day)
