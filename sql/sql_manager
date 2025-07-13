@@ -17,3 +17,5 @@ class SqlManager(object):
         return self.sql.select_proxy(table_name, **kwargs)
   def update_valid_proxy(self,id=0):
         return self.sql.update_valid_proxy(id=id)
+  def delete_proxy(self, table_name, proxy):
+        return self.sql.delete_proxy(table_name, proxy)
