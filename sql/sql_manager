@@ -23,3 +23,5 @@ class SqlManager(object):
         return self.sql.delete_old(table_name, day)
   def get_proxy_count(self, table_name):
         return self.sql.get_proxy_count(table_name = table_name)
+  def get_proxy_ids(self, table_name):
+        return self.sql.get_proxy_ids(table_name = table_name)
