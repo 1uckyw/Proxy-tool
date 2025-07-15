@@ -42,3 +42,5 @@ class SqlManager(object):
             self.sql = MySql(**db_config)
         elif db_type == 'redis':
             pass
+        elif db_type == 'sqlite':
+            pass
