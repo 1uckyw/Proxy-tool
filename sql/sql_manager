@@ -40,3 +40,5 @@ class SqlManager(object):
         if db_type == 'mysql':
             from sql.mysql import MySql
             self.sql = MySql(**db_config)
+        elif db_type == 'redis':
+            pass
