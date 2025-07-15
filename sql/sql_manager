@@ -33,3 +33,6 @@ class SqlManager(object):
         return self.sql.get_proxies_info(table_name=table_name, start_id=start_id, limit=limit)
   def commit(self):
         return self.sql.commit()
+  def __init__(self):
+        db_type = config.DB_config.get('db_type', 'mysql')
+        db_config = config.DB_config.get(db_type)
