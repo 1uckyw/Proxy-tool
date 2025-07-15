@@ -27,3 +27,5 @@ class SqlManager(object):
         return self.sql.get_proxy_ids(table_name = table_name)
   def del_proxy_with_id(self, table_name, id):
         return self.sql.del_proxy_with_id(table_name = table_name, id = id)
+  def del_proxy_with_ip(self, table_name, ip):
+        return self.sql.del_proxy_with_ip(table_name = table_name, ip = ip)
