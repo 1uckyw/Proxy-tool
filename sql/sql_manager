@@ -44,3 +44,5 @@ class SqlManager(object):
             pass
         elif db_type == 'sqlite':
             pass
+        elif db_type == 'mongodb':
+            pass
