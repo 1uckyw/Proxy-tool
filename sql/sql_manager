@@ -49,3 +49,4 @@ class SqlManager(object):
             self.sql = Mongodb(**db_config)
         else:  # default mysql
             from sql.mysql import MySql
+            self.sql = MySql(**config.DB_config.get('db_type'))
