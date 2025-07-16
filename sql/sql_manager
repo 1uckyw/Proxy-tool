@@ -47,3 +47,5 @@ class SqlManager(object):
         elif db_type == 'mongodb':
             from sql.mongodb import Mongodb
             self.sql = Mongodb(**db_config)
+        else:  # default mysql
+            from sql.mysql import MySql
