@@ -1,1 +1,3 @@
+from sql.sql_base import SqlBase
 
+class Mongodb(SqlBase):
