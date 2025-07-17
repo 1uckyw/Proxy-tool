@@ -1,3 +1,6 @@
 from sql.sql_base import SqlBase
 
 class Mongodb(SqlBase):
+
+    def __init__(self, **kwargs):
+        super(Mongodb, self).__init__(**kwargs)
