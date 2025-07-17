@@ -4,3 +4,6 @@ class Mongodb(SqlBase):
 
     def __init__(self, **kwargs):
         super(Mongodb, self).__init__(**kwargs)
+
+    def init_database(self, database_name):
+        pass
