@@ -15,3 +15,5 @@ class Mongodb(SqlBase):
         pass
     def init_proxy_table(self, table_name):
         pass
+    def insert_proxy(self, table_name, proxy):
+        data = proxy.get_dict()
