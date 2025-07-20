@@ -19,3 +19,5 @@ class Mongodb(SqlBase):
         data = proxy.get_dict()
         data['save_time'] = str(datetime.datetime.now())
         self.db[table_name].insert(data)
+    def select_proxy(self, table_name, **kwargs):
+        filter = {}
