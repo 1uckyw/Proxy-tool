@@ -21,3 +21,5 @@ class Mongodb(SqlBase):
         self.db[table_name].insert(data)
     def select_proxy(self, table_name, **kwargs):
         filter = {}
+        if kwargs.get('anonymity') != '':
+            filter['anonymity'] = kwargs.get('anonymity')
