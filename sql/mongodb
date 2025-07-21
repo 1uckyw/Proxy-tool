@@ -25,3 +25,5 @@ class Mongodb(SqlBase):
             filter['anonymity'] = kwargs.get('anonymity')
         if kwargs.get('https') != '':
             filter['https'] = kwargs.get('https')
+        data = [item for item in self.db[table_name].find(filter).limit(int(kwargs.get('count')))]
+        return data
