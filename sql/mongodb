@@ -23,3 +23,5 @@ class Mongodb(SqlBase):
         filter = {}
         if kwargs.get('anonymity') != '':
             filter['anonymity'] = kwargs.get('anonymity')
+        if kwargs.get('https') != '':
+            filter['https'] = kwargs.get('https')
