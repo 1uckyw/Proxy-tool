@@ -27,3 +27,9 @@ class Mongodb(SqlBase):
             filter['https'] = kwargs.get('https')
         data = [item for item in self.db[table_name].find(filter).limit(int(kwargs.get('count')))]
         return data
+    def update_proxy(self, table_name, proxy):
+        self.db[table_name].update_one(
+            {'_id': proxy.id},
+            {'$set':
+                 {'https': proxy.https, 'speed': proxy.speed, 'vali_count': proxy.vali_count,
+                  'anonymity': proxy.anonymity, 'save_time': str(datetime.datetime.now())}})
