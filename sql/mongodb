@@ -37,3 +37,5 @@ class Mongodb(SqlBase):
         return self.del_proxy_with_id(table_name, proxy.id)
     def delete_old(self, table_name, day):
         start = datetime.datetime.now()
+        end = datetime.datetime.now()
+        pass
