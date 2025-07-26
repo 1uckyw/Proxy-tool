@@ -39,3 +39,5 @@ class Mongodb(SqlBase):
         start = datetime.datetime.now()
         end = datetime.datetime.now()
         pass
+    def get_proxy_count(self, table_name):
+        count = self.db[table_name].find().count()
