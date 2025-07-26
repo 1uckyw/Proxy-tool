@@ -41,3 +41,4 @@ class Mongodb(SqlBase):
         pass
     def get_proxy_count(self, table_name):
         count = self.db[table_name].find().count()
+        logging.debug('count:%s' % count)
