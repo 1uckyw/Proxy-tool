@@ -45,3 +45,4 @@ class Mongodb(SqlBase):
         return count
     def get_proxy_ids(self, table_name):
         ids = self.db[table_name].distinct('_id')
+        logging.debug('ids:%s' % ids)
