@@ -50,3 +50,4 @@ class Mongodb(SqlBase):
     def get_proxy_with_id(self, table_name, id):
         data = self.db[table_name].find_one({'_id': id})
         logging.debug(data)
+        proxy = Proxy()
