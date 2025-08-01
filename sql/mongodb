@@ -47,3 +47,5 @@ class Mongodb(SqlBase):
         ids = self.db[table_name].distinct('_id')
         logging.debug('ids:%s' % ids)
         return ids
+    def get_proxy_with_id(self, table_name, id):
+        data = self.db[table_name].find_one({'_id': id})
